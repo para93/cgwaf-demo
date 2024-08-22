@@ -8,6 +8,13 @@ services:
     #  context: ./juice-shop
     ports:
         - '3000:3000'
+  vampi:
+    image: erev0s/vampi
+    #build:
+    # dockerfile: Dockerfile
+    # context: ./vampi
+    ports:
+        - '5000:5000'
 
   nginx-reverse-proxy:
     container_name: cp-appsec-nginx-reverse-proxy
